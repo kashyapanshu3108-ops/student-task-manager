@@ -1,0 +1,28 @@
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+const tasks = [
+  {
+    id: 1,
+    title: "Learn React",
+    completed: false,
+  },
+  {
+    id: 2,
+    title: "Learn Backend",
+    completed: true,
+  },
+];
+
+app.get("/api/tasks", (req, res) => {
+  res.json(tasks);
+});
+
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
+});
