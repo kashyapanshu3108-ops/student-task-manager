@@ -14,7 +14,7 @@ const tasks = [
   },
   {
     id: 2,
-    title: "Learn Backend",
+    title: "Learn Backend also with fun",
     completed: true,
   },
 ];
