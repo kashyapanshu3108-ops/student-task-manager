@@ -36,5 +36,5 @@ function App() {
 </div>
   );
 }
-
+const [newTask, setNewTask] = useState("");
 export default App;
