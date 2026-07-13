@@ -7,34 +7,43 @@ import { useState, useEffect } from "react";
 //import { useEffect } from "react";
 import axios from "axios";
 
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 function App() {
 
-  useEffect(() => {
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState("");
 
+  useEffect(() => {
     axios
       .get("http://localhost:5000/api/tasks")
       .then((response) => {
-      setTasks(response.data);  
-        })
+        setTasks(response.data);
+      })
       .catch((error) => {
         console.log(error);
       });
-
   }, []);
-  const [tasks, setTasks] = useState([]);
 
   return (
-  <div>
-  <h1>Student Task Manager</h1>
-  {
-    tasks.map((task) => (
-      <h3 key={task.id}>
-        {task.title}
-      </h3>
-    ))
-  }
-</div>
+    <div>
+      <h1>Student Task Manager</h1>
+
+      <input
+        type="text"
+        placeholder="Enter Task"
+        value={newTask}
+        onChange={(e) => setNewTask(e.target.value)}
+      />
+
+      <button>Add Task</button>
+
+      {tasks.map((task) => (
+        <h3 key={task.id}>{task.title}</h3>
+      ))}
+    </div>
   );
 }
-const [newTask, setNewTask] = useState("");
+
 export default App;
