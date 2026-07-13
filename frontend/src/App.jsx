@@ -14,6 +14,27 @@ function App() {
 
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
+  function addTask() {
+
+  if(newTask.trim()===""){
+    return;
+  }
+
+  const task = {
+
+    id: Date.now(),
+
+    title: newTask,
+
+    completed:false
+
+  };
+
+  setTasks([...tasks, task]);
+
+  setNewTask("");
+
+}
 
   useEffect(() => {
     axios
