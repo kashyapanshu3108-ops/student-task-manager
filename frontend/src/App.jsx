@@ -52,6 +52,25 @@ function deleteTask(id) {
       });
   }, []);
 
+function addTask() {
+
+  // if (newTask.trim() === "") {
+  //   alert("Please enter a task");
+  //   return;
+  // }
+
+  // const task = {
+  //   id: Date.now(),
+  //   title: newTask,
+  //   completed: false,
+  // };
+
+  // setTasks([...tasks, task]);
+
+  // setNewTask("");
+
+}
+
   return (
     <div>
       <h1>Student Task Manager</h1>
