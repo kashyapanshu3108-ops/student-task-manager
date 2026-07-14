@@ -59,11 +59,11 @@ function addTask() {
     return;
   }
 
-  // const task = {
-  //   id: Date.now(),
-  //   title: newTask,
-  //   completed: false,
-  // };
+  const task = {
+    id: Date.now(),
+    title: newTask,
+    completed: false,
+  };
 
   // setTasks([...tasks, task]);
 
