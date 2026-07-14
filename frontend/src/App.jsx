@@ -3,9 +3,9 @@
 //import viteLogo from './assets/vite.svg'
 //import heroImg from './assets/hero.png'
 //import './App.css'
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 //import { useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
