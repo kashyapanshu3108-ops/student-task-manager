@@ -35,6 +35,11 @@ function App() {
   setNewTask("");
 
 }
+function deleteTask(id) {
+  const updatedTasks = tasks.filter((task) => task.id !== id);
+
+  setTasks(updatedTasks);
+}
 
   useEffect(() => {
     axios
