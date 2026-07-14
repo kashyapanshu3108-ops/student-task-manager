@@ -65,7 +65,7 @@ function addTask() {
     completed: false,
   };
 
-  // setTasks([...tasks, task]);
+  setTasks([...tasks, task]);
 
   // setNewTask("");
 
