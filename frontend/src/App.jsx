@@ -58,8 +58,9 @@ function App() {
         onChange={(e) => setNewTask(e.target.value)}
       />
 
-      <button>Add Task</button>
-
+<button onClick={addTask}>
+    Add Task
+</button>
       {tasks.map((task) => (
         <h3 key={task.id}>{task.title}</h3>
       ))}
