@@ -67,7 +67,7 @@ function addTask() {
 
   setTasks([...tasks, task]);
 
-  // setNewTask("");
+  setNewTask("");
 
 }
 
