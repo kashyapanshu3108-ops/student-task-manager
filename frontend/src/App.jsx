@@ -54,10 +54,10 @@ function deleteTask(id) {
 
 function addTask() {
 
-  // if (newTask.trim() === "") {
-  //   alert("Please enter a task");
-  //   return;
-  // }
+  if (newTask.trim() === "") {
+    alert("Please enter a task");
+    return;
+  }
 
   // const task = {
   //   id: Date.now(),
