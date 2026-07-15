@@ -6,6 +6,8 @@
 // import { useState, useEffect } from "react";
 //import { useEffect } from "react";
 // import axios from "axios";
+import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -72,23 +74,29 @@ function addTask() {
 }
 
   return (
-    <div>
-      <h1>Student Task Manager</h1>
+   <div>
 
-      <input
-        type="text"
-        placeholder="Enter Task"
-        value={newTask}
-        onChange={(e) => setNewTask(e.target.value)}
-      />
+  <h1>Student Task Manager</h1>
 
-<button onClick={addTask}>
-    Add Task
-</button>
-      {tasks.map((task) => (
-        <h3 key={task.id}>{task.title}</h3>
-      ))}
-    </div>
+  <TaskForm
+
+    newTask={newTask}
+
+    setNewTask={setNewTask}
+
+    addTask={addTask}
+
+  />
+
+  <TaskList
+
+    tasks={tasks}
+
+    deleteTask={deleteTask}
+
+  />
+
+</div>
   );
   {tasks.map((task) => (
   <div key={task.id}>
